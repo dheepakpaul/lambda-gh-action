@@ -56,8 +56,8 @@ jobs:
         run: |
           #npm ci
 
-      - name: deploy
-        run: |
-          npx ncc build index.py
-          zip -j deploy.zip ./dist/*
-          aws lambda update-function-code --function-name=github-to-lambda --zip-file=fileb://deploy.zip
+      #- name: deploy
+        #run: |
+          #npx ncc build index.py
+          #zip -j deploy.zip ./dist/*
+          #aws lambda update-function-code --function-name=github-to-lambda --zip-file=fileb://deploy.zip
