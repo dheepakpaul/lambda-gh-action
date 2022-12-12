@@ -24,11 +24,11 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.AWS_REGION }}
       - name: AWS Lambda Deploy
-         uses: appleboy/lambda-action@v0.0.4
-         with:
-            #name of my AWS Lambda Function
-            aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-            aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-            aws-region: ${{ secrets.AWS_REGION }}
-            function_name: github-to-lambda
-            source: lambda_function.py
+        uses: appleboy/lambda-action@v0.0.4
+        with:
+          #name of my AWS Lambda Function
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+          function_name: github-to-lambda
+          source: lambda_function.py
