@@ -27,7 +27,7 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-2
           function_name: github-to-lambda
-          source: index.py
+          source: lambda_function.py
       #- name: deploy
         #run: |
           #npx ncc build index.py
