@@ -28,5 +28,5 @@ jobs:
          uses: appleboy/lambda-action@v0.0.4
          with:
             #name of my AWS Lambda Function
-          function_name: github-to-lambda
-          source: lambda_function.py
+            function_name: github-to-lambda
+            source: lambda_function.py
