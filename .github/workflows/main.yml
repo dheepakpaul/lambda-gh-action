@@ -1,5 +1,4 @@
 name: Deploy
-
 on:
   push:
     branches:
@@ -10,9 +9,7 @@ jobs:
     name: deploy
     runs-on: ubuntu-latest
     steps:
-      - name: checkout source code
       - uses: actions/checkout@v2
-      - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.9'
@@ -28,8 +25,3 @@ jobs:
           aws-region: us-east-2
           function_name: github-to-lambda
           source: lambda_function.py
-      #- name: deploy
-        #run: |
-          #npx ncc build index.py
-          #zip -j deploy.zip ./dist/*
-          #aws lambda update-function-code --function-name=github-to-lambda --zip-file=fileb://deploy.zip
