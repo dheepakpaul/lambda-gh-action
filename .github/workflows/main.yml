@@ -27,5 +27,8 @@ jobs:
          uses: appleboy/lambda-action@v0.0.4
          with:
             #name of my AWS Lambda Function
+            aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+            aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+            aws-region: us-east-2
             function_name: github-to-lambda
             source: lambda_function.py
